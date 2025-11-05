@@ -1,8 +1,13 @@
 import { FaPython, FaJava, FaHtml5, FaDatabase, FaCode, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import { SiDjango } from 'react-icons/si';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Projects = () => {
-  const projects = [
+  const { language } = useLanguage();
+  const t = translations[language];
+
+  const projects = language === 'pt' ? [
     {
       title: "Curso de Python",
       description: "Repositório com exercícios completos do Curso de Python do Gustavo Guanabara, abordando conceitos fundamentais até avançados.",
@@ -57,6 +62,61 @@ const Projects = () => {
       githubLink: "https://github.com/vickyAqui?tab=repositories",
       color: "pink"
     }
+  ] : [
+    {
+      title: "Python Course",
+      description: "Repository with complete exercises from Gustavo Guanabara's Python Course, covering fundamental to advanced concepts.",
+      icon: FaPython,
+      technologies: ["Python", "Algorithms", "OOP"],
+      liveLink: "https://github.com/vickyAqui/Curso-de-Python",
+      githubLink: "https://github.com/vickyAqui/Curso-de-Python",
+      color: "purple"
+    },
+    {
+      title: "Egiton Prime",
+      description: "Web project developed with focus on responsive design and modern CSS best practices.",
+      icon: FaCode,
+      technologies: ["HTML", "CSS", "JavaScript"],
+      liveLink: "https://github.com/vickyAqui/Egiton-Prime",
+      githubLink: "https://github.com/vickyAqui/Egiton-Prime",
+      color: "pink"
+    },
+    {
+      title: "ETEC June Festival 2024",
+      description: "Website developed for ETEC Cidade Tiradentes June Festival, with thematic and interactive layout.",
+      icon: FaHtml5,
+      technologies: ["HTML", "CSS", "Design"],
+      liveLink: "https://github.com/vickyAqui/Festa-Junina-Etec-2024",
+      githubLink: "https://github.com/vickyAqui/Festa-Junina-Etec-2024",
+      color: "purple"
+    },
+    {
+      title: "Programming Techniques",
+      description: "Exercises and projects developed in Java applying OOP concepts and programming best practices.",
+      icon: FaJava,
+      technologies: ["Java", "OOP", "Algorithms"],
+      liveLink: "https://github.com/vickyAqui/TPA",
+      githubLink: "https://github.com/vickyAqui/TPA",
+      color: "pink"
+    },
+    {
+      title: "Database",
+      description: "Projects and exercises focused on modeling, SQL queries, and relational database management.",
+      icon: FaDatabase,
+      technologies: ["SQL", "MySQL", "PostgreSQL"],
+      liveLink: "https://github.com/vickyAqui/Banco-de-Dados",
+      githubLink: "https://github.com/vickyAqui/Banco-de-Dados",
+      color: "purple"
+    },
+    {
+      title: "More Projects",
+      description: "Check out all my 25+ repositories on GitHub with various study and development projects.",
+      icon: FaGithub,
+      technologies: ["Python", "Java", "Web"],
+      liveLink: "https://github.com/vickyAqui?tab=repositories",
+      githubLink: "https://github.com/vickyAqui?tab=repositories",
+      color: "pink"
+    }
   ];
 
   return (
@@ -64,11 +124,11 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Meus Projetos
+            {t.projects.title}
           </h2>
           <div className="w-20 h-1 bg-purple-500 mx-auto mb-4"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Alguns dos projetos que desenvolvi. Cada um representa um desafio único e aprendizados valiosos.
+            {t.projects.subtitle}
           </p>
         </div>
 
@@ -115,14 +175,14 @@ const Projects = () => {
                     className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors duration-200"
                   >
                     <FaExternalLinkAlt className="w-4 h-4" />
-                    Ver Projeto
+                    {language === 'pt' ? 'Ver Projeto' : 'View Project'}
                   </a>
                   <a
                     href={project.githubLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="px-4 py-2 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors duration-200 flex items-center justify-center"
-                    title="Ver no GitHub"
+                    title={language === 'pt' ? 'Ver no GitHub' : 'View on GitHub'}
                   >
                     <FaGithub className="w-5 h-5" />
                   </a>

@@ -1,11 +1,16 @@
 import { FaReact, FaNodeJs, FaPython, FaGitAlt, FaHtml5, FaCss3Alt, FaJava, FaDocker } from 'react-icons/fa';
 import { SiJavascript, SiTailwindcss, SiMongodb, SiMysql, SiPostgresql, SiDjango, SiFlask, SiSpring, SiPytest, SiJunit5 } from 'react-icons/si';
 import { HiCode, HiServer, HiCog } from 'react-icons/hi';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Skills = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   const skills = [
     {
-      category: "Linguagens",
+      category: language === 'pt' ? 'Linguagens' : 'Languages',
       icon: HiCode,
       color: "purple",
       items: [
@@ -16,7 +21,7 @@ const Skills = () => {
       ]
     },
     {
-      category: "Frameworks & Backend",
+      category: language === 'pt' ? 'Frameworks & Backend' : 'Frameworks & Backend',
       icon: HiServer,
       color: "pink",
       items: [
@@ -27,7 +32,7 @@ const Skills = () => {
       ]
     },
     {
-      category: "Bancos & Ferramentas",
+      category: language === 'pt' ? 'Bancos & Ferramentas' : 'Database & Tools',
       icon: HiCog,
       color: "purple",
       items: [
@@ -60,11 +65,11 @@ const Skills = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Minhas Habilidades
+            {t.skills.title}
           </h2>
           <div className="w-20 h-1 bg-purple-500 mx-auto mb-4"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Tecnologias e ferramentas que utilizo no dia a dia para criar soluções digitais
+            {t.skills.subtitle}
           </p>
         </div>
 

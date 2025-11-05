@@ -1,6 +1,10 @@
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope, FaHeart } from 'react-icons/fa';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Footer = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
   const currentYear = new Date().getFullYear();
 
   return (
@@ -10,7 +14,7 @@ const Footer = () => {
           {/* Logo e texto */}
           <div className="text-center md:text-left">
             <h3 className="text-xl font-bold text-purple-400 mb-2">Victoria Peixoto</h3>
-            <p className="text-gray-400 text-sm">Desenvolvedora Full Stack</p>
+            <p className="text-gray-400 text-sm">{t.footer.role}</p>
           </div>
 
           {/* Redes sociais */}
@@ -48,7 +52,7 @@ const Footer = () => {
               &copy; {currentYear} Victoria
             </p>
             <p className="text-gray-500 text-xs mt-1 flex items-center justify-center md:justify-end gap-1">
-              Feito com <FaHeart className="text-purple-400" /> React & Tailwind
+              {t.footer.madeWith} <FaHeart className="text-purple-400" /> {t.footer.using}
             </p>
           </div>
         </div>

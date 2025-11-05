@@ -1,7 +1,12 @@
 import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { HiSparkles } from 'react-icons/hi';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Hero = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 via-white to-purple-50 pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -23,18 +28,18 @@ const Hero = () => {
           {/* Texto principal */}
           <div className="flex-1 text-center md:text-left">
             <p className="text-purple-600 font-semibold mb-2 text-lg">
-              Olá! 👋
+              {t.hero.greeting}
             </p>
             <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-4">
-              Eu sou <span className="text-purple-600">Victoria</span>
+              {t.hero.intro} <span className="text-purple-600">Victoria</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-700 mb-6 font-medium">
-              Desenvolvedora de Software
+              {t.hero.role}
             </p>
 
             <p className="text-lg text-gray-600 mb-8 max-w-2xl">
-              Estudante de desenvolvimento de sistemas na ETEC Cidade Tiradentes. Apaixonada por criar soluções digitais com Python, Java, Django, Flask e Spring Boot.
+              {t.hero.description}
             </p>
 
             {/* Botões de ação */}
@@ -44,14 +49,14 @@ const Hero = () => {
                 className="flex items-center justify-center gap-2 px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-all duration-300 shadow-md hover:shadow-xl font-medium"
               >
                 <HiSparkles className="w-5 h-5" />
-                Ver Projetos
+                {t.hero.viewProjects}
               </a>
               <a
                 href="#contact"
                 className="flex items-center justify-center gap-2 px-8 py-3 bg-white text-purple-600 border-2 border-purple-600 rounded-lg hover:bg-purple-50 transition-all duration-300 shadow-sm font-medium"
               >
                 <FaEnvelope className="w-5 h-5" />
-                Entre em Contato
+                {t.hero.getInTouch}
               </a>
             </div>
 

@@ -1,8 +1,13 @@
 import { useState } from 'react';
 import { HiMail, HiPhone, HiLocationMarker, HiPaperAirplane } from 'react-icons/hi';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Contact = () => {
+  const { language } = useLanguage();
+  const t = translations[language];
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,7 +27,7 @@ const Contact = () => {
     // Aqui você pode adicionar a lógica para enviar o formulário
     // Por exemplo, usando EmailJS, uma API backend, etc.
     console.log('Form data:', formData);
-    alert('Mensagem enviada! (Configure um serviço de email para funcionar)');
+    alert(language === 'pt' ? 'Mensagem enviada! (Configure um serviço de email para funcionar)' : 'Message sent! (Configure an email service to work)');
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
@@ -31,11 +36,11 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Entre em Contato
+            {t.contact.title}
           </h2>
           <div className="w-20 h-1 bg-purple-500 mx-auto mb-4"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Tem algum projeto em mente? Vamos conversar e criar algo incrível juntos!
+            {t.contact.subtitle}
           </p>
         </div>
 
@@ -43,10 +48,10 @@ const Contact = () => {
           {/* Informações de contato */}
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
-              Informações de Contato
+              {language === 'pt' ? 'Informações de Contato' : 'Contact Information'}
             </h3>
             <p className="text-gray-600 mb-8">
-              Estou sempre aberta a discutir novos projetos, ideias criativas ou oportunidades de fazer parte da sua visão.
+              {language === 'pt' ? 'Estou sempre aberta a discutir novos projetos, ideias criativas ou oportunidades de fazer parte da sua visão.' : "I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision."}
             </p>
 
             <div className="space-y-6">
@@ -57,7 +62,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h4 className="text-lg font-medium text-gray-900">Email</h4>
+                  <h4 className="text-lg font-medium text-gray-900">{t.contact.email}</h4>
                   <p className="text-gray-600">galaxy.o.peixoto@gmail.com</p>
                 </div>
               </div>
@@ -81,8 +86,8 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="ml-4">
-                  <h4 className="text-lg font-medium text-gray-900">Localização</h4>
-                  <p className="text-gray-600">São Paulo, SP - Brasil</p>
+                  <h4 className="text-lg font-medium text-gray-900">{t.contact.location}</h4>
+                  <p className="text-gray-600">{language === 'pt' ? 'São Paulo, SP - Brasil' : 'São Paulo, SP - Brazil'}</p>
                 </div>
               </div>
             </div>
@@ -125,7 +130,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                  Nome
+                  {t.contact.form.name}
                 </label>
                 <input
                   type="text"
@@ -135,13 +140,13 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                  placeholder="Seu nome"
+                  placeholder={t.contact.form.namePlaceholder}
                 />
               </div>
 
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                  Email
+                  {t.contact.form.email}
                 </label>
                 <input
                   type="email"
@@ -151,13 +156,13 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                  placeholder="seu.email@example.com"
+                  placeholder={t.contact.form.emailPlaceholder}
                 />
               </div>
 
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  Assunto
+                  {t.contact.form.subject}
                 </label>
                 <input
                   type="text"
@@ -167,13 +172,13 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
-                  placeholder="Assunto da mensagem"
+                  placeholder={t.contact.form.subjectPlaceholder}
                 />
               </div>
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                  Mensagem
+                  {t.contact.form.message}
                 </label>
                 <textarea
                   id="message"
@@ -183,7 +188,7 @@ const Contact = () => {
                   required
                   rows="5"
                   className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-none"
-                  placeholder="Sua mensagem..."
+                  placeholder={t.contact.form.messagePlaceholder}
                 ></textarea>
               </div>
 
@@ -192,7 +197,7 @@ const Contact = () => {
                 className="w-full flex items-center justify-center gap-2 px-8 py-3 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors duration-200 shadow-md"
               >
                 <HiPaperAirplane className="w-5 h-5" />
-                Enviar Mensagem
+                {t.contact.form.send}
               </button>
             </form>
           </div>

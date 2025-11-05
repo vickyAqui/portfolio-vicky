@@ -1,15 +1,19 @@
 import { useState } from 'react';
-import { HiHome, HiUser, HiLightningBolt, HiBriefcase, HiMail, HiMenu, HiX } from 'react-icons/hi';
+import { HiHome, HiUser, HiLightningBolt, HiBriefcase, HiMail, HiMenu, HiX, HiTranslate } from 'react-icons/hi';
+import { useLanguage } from '../contexts/LanguageContext';
+import { translations } from '../translations/translations';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
+  const t = translations[language];
 
   const navItems = [
-    { name: 'Início', href: '#home', icon: HiHome },
-    { name: 'Sobre', href: '#about', icon: HiUser },
-    { name: 'Skills', href: '#skills', icon: HiLightningBolt },
-    { name: 'Projetos', href: '#projects', icon: HiBriefcase },
-    { name: 'Contato', href: '#contact', icon: HiMail },
+    { name: t.nav.home, href: '#home', icon: HiHome },
+    { name: t.nav.about, href: '#about', icon: HiUser },
+    { name: t.nav.skills, href: '#skills', icon: HiLightningBolt },
+    { name: t.nav.projects, href: '#projects', icon: HiBriefcase },
+    { name: t.nav.contact, href: '#contact', icon: HiMail },
   ];
 
   return (
@@ -36,11 +40,30 @@ const Navbar = () => {
                   {item.name}
                 </a>
               ))}
+              
+              {/* Language Toggle Button */}
+              <button
+                onClick={toggleLanguage}
+                className="flex items-center gap-2 px-3 py-2 bg-purple-100 text-purple-600 rounded-lg hover:bg-purple-200 transition-all duration-200 font-medium"
+                title={language === 'pt' ? 'Switch to English' : 'Mudar para Português'}
+              >
+                <HiTranslate className="w-5 h-5" />
+                <span className="uppercase font-bold">{language === 'pt' ? 'EN' : 'PT'}</span>
+              </button>
             </div>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center gap-2">
+            {/* Language Toggle Mobile */}
+            <button
+              onClick={toggleLanguage}
+              className="p-2 bg-purple-100 text-purple-600 rounded-lg hover:bg-purple-200 transition-all"
+              title={language === 'pt' ? 'Switch to English' : 'Mudar para Português'}
+            >
+              <span className="text-sm font-bold uppercase">{language === 'pt' ? 'EN' : 'PT'}</span>
+            </button>
+            
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-gray-700 hover:text-purple-600 focus:outline-none"
