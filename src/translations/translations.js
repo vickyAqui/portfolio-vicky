@@ -38,7 +38,7 @@ export const translations = {
       frontend: 'Frontend',
       backend: 'Backend',
       database: 'Banco de Dados',
-      tools: 'Ferramentas'
+      tools: 'Ferramentas e DevOps'
     },
     projects: {
       title: 'Meus Projetos',
@@ -109,7 +109,7 @@ export const translations = {
       frontend: 'Frontend',
       backend: 'Backend',
       database: 'Database',
-      tools: 'Tools'
+      tools: 'Tools & DevOps'
     },
     projects: {
       title: 'My Projects',
