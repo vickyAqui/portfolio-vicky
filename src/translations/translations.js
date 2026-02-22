@@ -8,7 +8,7 @@ export const translations = {
       contact: 'Contato'
     },
     hero: {
-      greeting: 'Olá! 👋',
+      greeting: 'Olá!',
       intro: 'Eu sou',
       role: 'Desenvolvedora de Software',
       description: 'Estudante de desenvolvimento de sistemas na ETEC Cidade Tiradentes. Apaixonada por criar soluções digitais com Python, Java, Django, Flask e Spring Boot.',
@@ -79,7 +79,7 @@ export const translations = {
       contact: 'Contact'
     },
     hero: {
-      greeting: 'Hello! 👋',
+      greeting: 'Hello!',
       intro: 'I am',
       role: 'Software Developer',
       description: 'Computer Systems Development student at ETEC Cidade Tiradentes. Passionate about creating digital solutions with Python, Java, Django, Flask, and Spring Boot.',
