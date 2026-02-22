@@ -10,111 +10,111 @@ const Projects = () => {
   const projects = language === 'pt' ? [
     {
       title: "Este Portfólio",
-      description: "Portfólio pessoal responsivo e moderno com suporte bilíngue (PT/EN). Desenvolvido com React, Tailwind CSS e Vite, apresentando animações fluidas e design minimalista.",
+      description: "Portfólio pessoal responsivo e moderno com suporte bilíngue (PT/EN). Desenvolvido com React, Tailwind CSS e Vite, apresentando animações fluidas, design system profissional e interface intuitiva.",
       icon: FaCode,
       technologies: ["React", "Tailwind CSS", "Vite", "JavaScript"],
-      liveLink: "https://github.com/vickyAqui/portfolio",
-      githubLink: "https://github.com/vickyAqui/portfolio",
+      liveLink: "https://github.com/vickyAqui/portfolio-vicky",
+      githubLink: "https://github.com/vickyAqui/portfolio-vicky",
       color: "purple"
     },
     {
-      title: "Curso Python - Gustavo Guanabara",
-      description: "Repositório completo com 100+ exercícios resolvidos do curso de Python do Gustavo Guanabara. Abrange conceitos de lógica de programação, POO, manipulação de arquivos e estruturas de dados.",
-      icon: FaPython,
-      technologies: ["Python", "POO", "Algoritmos"],
-      liveLink: "https://github.com/vickyAqui/Curso-de-Python",
-      githubLink: "https://github.com/vickyAqui/Curso-de-Python",
-      color: "blue"
-    },
-    {
-      title: "Egiton Prime",
-      description: "Site corporativo responsivo desenvolvido com HTML5, CSS3 moderno e JavaScript puro. Implementação de grid responsivo, animações CSS3 e boas práticas de acessibilidade web.",
-      icon: FaHtml5,
-      technologies: ["HTML5", "CSS3", "JavaScript", "Responsivo"],
-      liveLink: "https://github.com/vickyAqui/Egiton-Prime",
-      githubLink: "https://github.com/vickyAqui/Egiton-Prime",
-      color: "orange"
-    },
-    {
-      title: "TPA - Técnicas de Programação",
-      description: "Coleção de algoritmos e estruturas de dados implementadas em Java. Inclui exercícios de programação orientada a objetos, padrões de design e otimização de performance.",
+      title: "JVMM - Jogo da Vida Marinha",
+      description: "Projeto acadêmico de desenvolvimento de sistemas. Jogo interativo implementado com Java e JavaFX, explorando conceitos de POO, design patterns e interface gráfica com simulação de ecossistema.",
       icon: FaJava,
-      technologies: ["Java", "POO", "Algoritmos", "Estruturas de Dados"],
-      liveLink: "https://github.com/vickyAqui/TPA",
-      githubLink: "https://github.com/vickyAqui/TPA",
+      technologies: ["Java", "JavaFX", "POO", "Game Dev"],
+      liveLink: "https://github.com/vickyAqui/JVMM",
+      githubLink: "https://github.com/vickyAqui/JVMM",
       color: "red"
     },
     {
-      title: "Festa Junina ETEC 2024",
-      description: "Website temático para evento escolar com layout festivo e interativo. Utiliza HTML semântico, CSS animations e design responsivo, atingindo 95+ de performance no PageSpeed.",
-      icon: FaDatabase,
-      technologies: ["HTML", "CSS", "Design UI", "Responsivo"],
-      liveLink: "https://github.com/vickyAqui/Festa-Junina-Etec-2024",
-      githubLink: "https://github.com/vickyAqui/Festa-Junina-Etec-2024",
-      color: "pink"
+      title: "Loja Musical",
+      description: "Aplicação web de e-commerce para loja de instrumentos musicais. Desenvolvido com JavaScript puro, implementa carrinho de compras, filtros de produtos e responsividade completa.",
+      icon: FaCode,
+      technologies: ["JavaScript", "HTML5", "CSS3", "DOM"],
+      liveLink: "https://github.com/vickyAqui/loja-musical",
+      githubLink: "https://github.com/vickyAqui/loja-musical",
+      color: "blue"
     },
     {
-      title: "Projetos no GitHub",
-      description: "25+ repositórios públicos com diversos projetos de estudo e desenvolvimento. Inclui projetos finais de cursos, exercícios de conceitos, e pequenos utilitários educacionais.",
+      title: "PharmaNews",
+      description: "Portal de notícias sobre farmácia e saúde. Website estático desenvolvido com HTML e CSS, com design responsivo, grid layout moderno e navegação intuitiva para conteúdo informativo.",
+      icon: FaHtml5,
+      technologies: ["HTML5", "CSS3", "Design Responsivo", "Web"],
+      liveLink: "https://github.com/vickyAqui/PharmaNews",
+      githubLink: "https://github.com/vickyAqui/PharmaNews",
+      color: "green"
+    },
+    {
+      title: "Currículo Digital",
+      description: "Portfólio único em CSS com design criativo. Projeto de estudo focado em experiência visual, uso avançado de CSS Grid e Flexbox, com apresentação profissional e interativa.",
+      icon: FaCode,
+      technologies: ["CSS3", "HTML5", "Design", "Portfólio"],
+      liveLink: "https://github.com/vickyAqui/Curriculo",
+      githubLink: "https://github.com/vickyAqui/Curriculo",
+      color: "orange"
+    },
+    {
+      title: "Todos os Meus Repositórios",
+      description: "Explore meu perfil do GitHub com vários projetos de estudo, exercícios de programação, e experimentos com diferentes tecnologias. Confira meu histórico de aprendizado e contribuições.",
       icon: FaGithub,
-      technologies: ["Python", "Java", "Web", "SQL"],
-      liveLink: "https://github.com/vickyAqui?tab=repositories",
-      githubLink: "https://github.com/vickyAqui?tab=repositories",
+      technologies: ["Java", "JavaScript", "HTML/CSS", "Diversos"],
+      liveLink: "https://github.com/vickyAqui",
+      githubLink: "https://github.com/vickyAqui",
       color: "gray"
     }
   ] : [
     {
       title: "This Portfolio",
-      description: "Responsive, modern personal portfolio with bilingual support (PT/EN). Built with React, Tailwind CSS and Vite, featuring smooth animations and minimalist design.",
+      description: "Responsive, modern personal portfolio with bilingual support (PT/EN). Built with React, Tailwind CSS and Vite, featuring smooth animations, professional design system and intuitive interface.",
       icon: FaCode,
       technologies: ["React", "Tailwind CSS", "Vite", "JavaScript"],
-      liveLink: "https://github.com/vickyAqui/portfolio",
-      githubLink: "https://github.com/vickyAqui/portfolio",
+      liveLink: "https://github.com/vickyAqui/portfolio-vicky",
+      githubLink: "https://github.com/vickyAqui/portfolio-vicky",
       color: "purple"
     },
     {
-      title: "Python Course - Gustavo Guanabara",
-      description: "Complete repository with 100+ solved exercises from Gustavo Guanabara's Python course. Covers logic programming, OOP, file handling and data structures.",
-      icon: FaPython,
-      technologies: ["Python", "OOP", "Algorithms"],
-      liveLink: "https://github.com/vickyAqui/Curso-de-Python",
-      githubLink: "https://github.com/vickyAqui/Curso-de-Python",
-      color: "blue"
-    },
-    {
-      title: "Egiton Prime",
-      description: "Responsive corporate website developed with HTML5, modern CSS3 and vanilla JavaScript. Implementation of responsive grid, CSS3 animations and web accessibility best practices.",
-      icon: FaHtml5,
-      technologies: ["HTML5", "CSS3", "JavaScript", "Responsive"],
-      liveLink: "https://github.com/vickyAqui/Egiton-Prime",
-      githubLink: "https://github.com/vickyAqui/Egiton-Prime",
-      color: "orange"
-    },
-    {
-      title: "Programming Techniques - TPA",
-      description: "Collection of algorithms and data structures implemented in Java. Includes object-oriented programming exercises, design patterns and performance optimization.",
+      title: "JVMM - Marine Life Game",
+      description: "Academic systems development project. Interactive game implemented with Java and JavaFX, exploring OOP concepts, design patterns and graphical interfaces with ecosystem simulation.",
       icon: FaJava,
-      technologies: ["Java", "OOP", "Algorithms", "Data Structures"],
-      liveLink: "https://github.com/vickyAqui/TPA",
-      githubLink: "https://github.com/vickyAqui/TPA",
+      technologies: ["Java", "JavaFX", "OOP", "Game Dev"],
+      liveLink: "https://github.com/vickyAqui/JVMM",
+      githubLink: "https://github.com/vickyAqui/JVMM",
       color: "red"
     },
     {
-      title: "ETEC June Festival 2024",
-      description: "Thematic website for a school event with festive and interactive layout. Uses semantic HTML, CSS animations and responsive design, achieving 95+ PageSpeed performance.",
-      icon: FaDatabase,
-      technologies: ["HTML", "CSS", "UI Design", "Responsive"],
-      liveLink: "https://github.com/vickyAqui/Festa-Junina-Etec-2024",
-      githubLink: "https://github.com/vickyAqui/Festa-Junina-Etec-2024",
-      color: "pink"
+      title: "Musical Store",
+      description: "E-commerce web application for a musical instruments store. Developed with vanilla JavaScript, implements shopping cart, product filters and complete responsive design.",
+      icon: FaCode,
+      technologies: ["JavaScript", "HTML5", "CSS3", "DOM"],
+      liveLink: "https://github.com/vickyAqui/loja-musical",
+      githubLink: "https://github.com/vickyAqui/loja-musical",
+      color: "blue"
     },
     {
-      title: "GitHub Repositories",
-      description: "25+ public repositories with diverse study and development projects. Includes course final projects, concept exercises, and small educational utilities.",
+      title: "PharmaNews",
+      description: "News portal about pharmacy and health. Static website developed with HTML and CSS, featuring responsive design, modern grid layout and intuitive navigation for informative content.",
+      icon: FaHtml5,
+      technologies: ["HTML5", "CSS3", "Responsive Design", "Web"],
+      liveLink: "https://github.com/vickyAqui/PharmaNews",
+      githubLink: "https://github.com/vickyAqui/PharmaNews",
+      color: "green"
+    },
+    {
+      title: "Digital Curriculum",
+      description: "Unique CSS-based portfolio with creative design. Study project focused on visual experience, advanced use of CSS Grid and Flexbox, with professional and interactive presentation.",
+      icon: FaCode,
+      technologies: ["CSS3", "HTML5", "Design", "Portfolio"],
+      liveLink: "https://github.com/vickyAqui/Curriculo",
+      githubLink: "https://github.com/vickyAqui/Curriculo",
+      color: "orange"
+    },
+    {
+      title: "All My Repositories",
+      description: "Explore my GitHub profile with various study projects, programming exercises, and experiments with different technologies. Check my learning history and contributions.",
       icon: FaGithub,
-      technologies: ["Python", "Java", "Web", "SQL"],
-      liveLink: "https://github.com/vickyAqui?tab=repositories",
-      githubLink: "https://github.com/vickyAqui?tab=repositories",
+      technologies: ["Java", "JavaScript", "HTML/CSS", "Diverse"],
+      liveLink: "https://github.com/vickyAqui",
+      githubLink: "https://github.com/vickyAqui",
       color: "gray"
     }
   ];
