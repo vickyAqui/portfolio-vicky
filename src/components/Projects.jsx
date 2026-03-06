@@ -1,5 +1,4 @@
-import { FaPython, FaJava, FaHtml5, FaDatabase, FaCode, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
-import { SiDjango } from 'react-icons/si';
+import { FaJava, FaHtml5, FaCode, FaGithub, FaExternalLinkAlt, FaNodeJs } from 'react-icons/fa';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations/translations';
 
@@ -18,8 +17,35 @@ const Projects = () => {
       color: "purple"
     },
     {
+      title: "Lista de Contatos",
+      description: "Aplicação web para gerenciamento de contatos com foco em manipulação de estado, interface clara e experiência de uso objetiva.",
+      icon: FaCode,
+      technologies: ["JavaScript", "HTML", "CSS", "Frontend"],
+      liveLink: "https://github.com/vickyAqui/Lista-de-Contatos",
+      githubLink: "https://github.com/vickyAqui/Lista-de-Contatos",
+      color: "blue"
+    },
+    {
+      title: "Projeto Node",
+      description: "Projeto backend em Node.js com foco em fundamentos de servidor, organização de rotas e estrutura de aplicação para APIs.",
+      icon: FaNodeJs,
+      technologies: ["Node.js", "JavaScript", "Backend", "API"],
+      liveLink: "https://github.com/vickyAqui/Projeto-Node",
+      githubLink: "https://github.com/vickyAqui/Projeto-Node",
+      color: "green"
+    },
+    {
+      title: "Exercícios Node",
+      description: "Coleção de exercícios práticos em Node.js para reforço de lógica, módulos, entrada/saída e práticas essenciais de backend.",
+      icon: FaNodeJs,
+      technologies: ["Node.js", "JavaScript", "CLI", "Estudos"],
+      liveLink: "https://github.com/vickyAqui/exercicios-node",
+      githubLink: "https://github.com/vickyAqui/exercicios-node",
+      color: "purple"
+    },
+    {
       title: "JVMM - Jogo da Vida Marinha",
-      description: "Projeto acadêmico de desenvolvimento de sistemas. Jogo interativo implementado com Java e JavaFX, explorando conceitos de POO, design patterns e interface gráfica com simulação de ecossistema.",
+      description: "Projeto acadêmico de desenvolvimento de sistemas: jogo em Java e JavaFX com simulação de ecossistema, POO e interface gráfica.",
       icon: FaJava,
       technologies: ["Java", "JavaFX", "POO", "Game Dev"],
       liveLink: "https://github.com/vickyAqui/JVMM",
@@ -28,39 +54,12 @@ const Projects = () => {
     },
     {
       title: "Loja Musical",
-      description: "Aplicação web de e-commerce para loja de instrumentos musicais. Desenvolvido com JavaScript puro, implementa carrinho de compras, filtros de produtos e responsividade completa.",
-      icon: FaCode,
-      technologies: ["JavaScript", "HTML5", "CSS3", "DOM"],
+      description: "Aplicação web de e-commerce para instrumentos musicais com JavaScript puro, organização de catálogo e layout responsivo.",
+      icon: FaHtml5,
+      technologies: ["JavaScript", "HTML", "CSS", "DOM"],
       liveLink: "https://github.com/vickyAqui/loja-musical",
       githubLink: "https://github.com/vickyAqui/loja-musical",
-      color: "blue"
-    },
-    {
-      title: "PharmaNews",
-      description: "Portal de notícias sobre farmácia e saúde. Website estático desenvolvido com HTML e CSS, com design responsivo, grid layout moderno e navegação intuitiva para conteúdo informativo.",
-      icon: FaHtml5,
-      technologies: ["HTML5", "CSS3", "Design Responsivo", "Web"],
-      liveLink: "https://github.com/vickyAqui/PharmaNews",
-      githubLink: "https://github.com/vickyAqui/PharmaNews",
-      color: "green"
-    },
-    {
-      title: "Currículo Digital",
-      description: "Portfólio único em CSS com design criativo. Projeto de estudo focado em experiência visual, uso avançado de CSS Grid e Flexbox, com apresentação profissional e interativa.",
-      icon: FaCode,
-      technologies: ["CSS3", "HTML5", "Design", "Portfólio"],
-      liveLink: "https://github.com/vickyAqui/Curriculo",
-      githubLink: "https://github.com/vickyAqui/Curriculo",
       color: "orange"
-    },
-    {
-      title: "Todos os Meus Repositórios",
-      description: "Explore meu perfil do GitHub com vários projetos de estudo, exercícios de programação, e experimentos com diferentes tecnologias. Confira meu histórico de aprendizado e contribuições.",
-      icon: FaGithub,
-      technologies: ["Java", "JavaScript", "HTML/CSS", "Diversos"],
-      liveLink: "https://github.com/vickyAqui",
-      githubLink: "https://github.com/vickyAqui",
-      color: "gray"
     }
   ] : [
     {
@@ -73,8 +72,35 @@ const Projects = () => {
       color: "purple"
     },
     {
+      title: "Contact List",
+      description: "Web application for contact management focused on state handling, clean interface and straightforward user experience.",
+      icon: FaCode,
+      technologies: ["JavaScript", "HTML", "CSS", "Frontend"],
+      liveLink: "https://github.com/vickyAqui/Lista-de-Contatos",
+      githubLink: "https://github.com/vickyAqui/Lista-de-Contatos",
+      color: "blue"
+    },
+    {
+      title: "Node Project",
+      description: "Backend project in Node.js focused on server fundamentals, route organization and application structure for APIs.",
+      icon: FaNodeJs,
+      technologies: ["Node.js", "JavaScript", "Backend", "API"],
+      liveLink: "https://github.com/vickyAqui/Projeto-Node",
+      githubLink: "https://github.com/vickyAqui/Projeto-Node",
+      color: "green"
+    },
+    {
+      title: "Node Exercises",
+      description: "Practical Node.js exercise collection to strengthen logic, modules, input/output and core backend practices.",
+      icon: FaNodeJs,
+      technologies: ["Node.js", "JavaScript", "CLI", "Study"],
+      liveLink: "https://github.com/vickyAqui/exercicios-node",
+      githubLink: "https://github.com/vickyAqui/exercicios-node",
+      color: "purple"
+    },
+    {
       title: "JVMM - Marine Life Game",
-      description: "Academic systems development project. Interactive game implemented with Java and JavaFX, exploring OOP concepts, design patterns and graphical interfaces with ecosystem simulation.",
+      description: "Academic systems development project: game in Java and JavaFX with ecosystem simulation, OOP and graphical interface.",
       icon: FaJava,
       technologies: ["Java", "JavaFX", "OOP", "Game Dev"],
       liveLink: "https://github.com/vickyAqui/JVMM",
@@ -83,39 +109,12 @@ const Projects = () => {
     },
     {
       title: "Musical Store",
-      description: "E-commerce web application for a musical instruments store. Developed with vanilla JavaScript, implements shopping cart, product filters and complete responsive design.",
-      icon: FaCode,
-      technologies: ["JavaScript", "HTML5", "CSS3", "DOM"],
+      description: "E-commerce web app for musical instruments using vanilla JavaScript, with catalog organization and responsive layout.",
+      icon: FaHtml5,
+      technologies: ["JavaScript", "HTML", "CSS", "DOM"],
       liveLink: "https://github.com/vickyAqui/loja-musical",
       githubLink: "https://github.com/vickyAqui/loja-musical",
-      color: "blue"
-    },
-    {
-      title: "PharmaNews",
-      description: "News portal about pharmacy and health. Static website developed with HTML and CSS, featuring responsive design, modern grid layout and intuitive navigation for informative content.",
-      icon: FaHtml5,
-      technologies: ["HTML5", "CSS3", "Responsive Design", "Web"],
-      liveLink: "https://github.com/vickyAqui/PharmaNews",
-      githubLink: "https://github.com/vickyAqui/PharmaNews",
-      color: "green"
-    },
-    {
-      title: "Digital Curriculum",
-      description: "Unique CSS-based portfolio with creative design. Study project focused on visual experience, advanced use of CSS Grid and Flexbox, with professional and interactive presentation.",
-      icon: FaCode,
-      technologies: ["CSS3", "HTML5", "Design", "Portfolio"],
-      liveLink: "https://github.com/vickyAqui/Curriculo",
-      githubLink: "https://github.com/vickyAqui/Curriculo",
       color: "orange"
-    },
-    {
-      title: "All My Repositories",
-      description: "Explore my GitHub profile with various study projects, programming exercises, and experiments with different technologies. Check my learning history and contributions.",
-      icon: FaGithub,
-      technologies: ["Java", "JavaScript", "HTML/CSS", "Diverse"],
-      liveLink: "https://github.com/vickyAqui",
-      githubLink: "https://github.com/vickyAqui",
-      color: "gray"
     }
   ];
 

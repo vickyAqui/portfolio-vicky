@@ -1,5 +1,5 @@
-import { FaReact, FaNodeJs, FaPython, FaGitAlt, FaHtml5, FaCss3Alt, FaJava, FaDocker } from 'react-icons/fa';
-import { SiJavascript, SiTailwindcss, SiMongodb, SiMysql, SiPostgresql, SiDjango, SiFlask, SiSpring, SiPytest, SiJunit5, SiVite } from 'react-icons/si';
+import { FaReact, FaNodeJs, FaGitAlt, FaHtml5, FaCss3Alt, FaJava, FaNpm } from 'react-icons/fa';
+import { SiJavascript, SiTailwindcss, SiVite, SiExpress, SiPug } from 'react-icons/si';
 import { HiCode, HiServer, HiCog } from 'react-icons/hi';
 import { useLanguage } from '../contexts/LanguageContext';
 import { translations } from '../translations/translations';
@@ -14,10 +14,10 @@ const Skills = () => {
       icon: HiCode,
       color: "purple",
       items: [
-        { name: "React", level: 85, icon: FaReact },
-        { name: "JavaScript", level: 85, icon: SiJavascript },
+        { name: "React", level: 86, icon: FaReact },
+        { name: "JavaScript", level: 90, icon: SiJavascript },
         { name: "HTML/CSS", level: 90, icon: FaHtml5 },
-        { name: "Tailwind CSS", level: 88, icon: SiTailwindcss },
+        { name: "Tailwind CSS", level: 85, icon: SiTailwindcss },
       ]
     },
     {
@@ -25,10 +25,10 @@ const Skills = () => {
       icon: HiServer,
       color: "pink",
       items: [
-        { name: "Python", level: 90, icon: FaPython },
-        { name: "Java", level: 85, icon: FaJava },
-        { name: "Django", level: 85, icon: SiDjango },
-        { name: "Flask", level: 80, icon: SiFlask },
+        { name: "Node.js", level: 82, icon: FaNodeJs },
+        { name: "Express", level: 78, icon: SiExpress },
+        { name: "Java", level: 80, icon: FaJava },
+        { name: "APIs REST", level: 78, icon: HiServer },
       ]
     },
     {
@@ -36,27 +36,27 @@ const Skills = () => {
       icon: HiCog,
       color: "purple",
       items: [
-        { name: "PostgreSQL", level: 85, icon: SiPostgresql },
-        { name: "MySQL", level: 85, icon: SiMysql },
+        { name: "Vite", level: 86, icon: SiVite },
+        { name: "npm", level: 84, icon: FaNpm },
         { name: "Git & GitHub", level: 90, icon: FaGitAlt },
-        { name: "Docker", level: 75, icon: FaDocker },
+        { name: "Pug", level: 70, icon: SiPug },
       ]
     }
   ];
 
   const techIcons = [
-    { icon: FaPython, name: 'Python', color: 'text-blue-500' },
+    { icon: FaNodeJs, name: 'Node.js', color: 'text-green-600' },
     { icon: FaJava, name: 'Java', color: 'text-red-600' },
     { icon: SiJavascript, name: 'JavaScript', color: 'text-yellow-500' },
     { icon: FaReact, name: 'React', color: 'text-blue-400' },
+    { icon: FaHtml5, name: 'HTML5', color: 'text-orange-600' },
+    { icon: FaCss3Alt, name: 'CSS3', color: 'text-blue-600' },
     { icon: SiTailwindcss, name: 'Tailwind CSS', color: 'text-cyan-500' },
     { icon: SiVite, name: 'Vite', color: 'text-purple-600' },
-    { icon: SiDjango, name: 'Django', color: 'text-green-700' },
-    { icon: SiFlask, name: 'Flask', color: 'text-gray-700' },
-    { icon: SiPostgresql, name: 'PostgreSQL', color: 'text-blue-700' },
-    { icon: SiMysql, name: 'MySQL', color: 'text-blue-600' },
+    { icon: SiExpress, name: 'Express', color: 'text-gray-700' },
+    { icon: SiPug, name: 'Pug', color: 'text-pink-600' },
     { icon: FaGitAlt, name: 'Git', color: 'text-orange-600' },
-    { icon: FaDocker, name: 'Docker', color: 'text-blue-500' },
+    { icon: FaNpm, name: 'npm', color: 'text-red-600' },
   ];
 
   return (
